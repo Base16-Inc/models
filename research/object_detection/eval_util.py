@@ -548,7 +548,7 @@ def repeated_checkpoint_run(tensor_dict,
 def _scale_box_to_absolute(args):
   boxes, image_shape = args
   return box_list_ops.to_absolute_coordinates(
-      box_list.BoxList(boxes), image_shape[0], image_shape[1]).get()
+      box_list.BoxList(boxes), image_shape[0], image_shape[1], check_range=False).get()
 
 
 def _resize_detection_masks(arg_tuple):

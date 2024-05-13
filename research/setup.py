@@ -7,19 +7,19 @@ from setuptools import setup
 # tf-models-offical requirements. These packages request for incompatible
 # oauth2client package.
 REQUIRED_PACKAGES = [
-    # Required for apache-beam with PY3
-    'avro-python3',
-    'pillow',
-    'lxml',
-    'matplotlib',
-    'Cython',
-    'contextlib2',
-    'tf-slim',
-    'six',
-    'pycocotools',
-    'lvis',
-    'scipy',
-    'pandas',
+#    # Required for apache-beam with PY3
+#    'avro-python3',
+#    'pillow',
+#    'lxml',
+#    'matplotlib',
+#    'Cython',
+#    'contextlib2',
+#    'tf-slim',
+#    'six',
+#    'pycocotools',
+#    'lvis',
+#    'scipy',
+#    'pandas',
 ]
 
 setup(
