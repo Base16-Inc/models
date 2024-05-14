@@ -56,16 +56,16 @@ if tf_version.is_tf2():
   from object_detection.models import center_net_mobilenet_v2_feature_extractor
   from object_detection.models import center_net_mobilenet_v2_fpn_feature_extractor
   from object_detection.models import center_net_resnet_feature_extractor
-  from object_detection.models import center_net_resnet_v1_fpn_feature_extractor
-  from object_detection.models import faster_rcnn_inception_resnet_v2_keras_feature_extractor as frcnn_inc_res_keras
-  from object_detection.models import faster_rcnn_resnet_keras_feature_extractor as frcnn_resnet_keras
-  from object_detection.models import ssd_resnet_v1_fpn_keras_feature_extractor as ssd_resnet_v1_fpn_keras
-  from object_detection.models import faster_rcnn_resnet_v1_fpn_keras_feature_extractor as frcnn_resnet_fpn_keras
-  from object_detection.models.ssd_mobilenet_v1_fpn_keras_feature_extractor import SSDMobileNetV1FpnKerasFeatureExtractor
-  from object_detection.models.ssd_mobilenet_v1_keras_feature_extractor import SSDMobileNetV1KerasFeatureExtractor
-  from object_detection.models.ssd_mobilenet_v2_fpn_keras_feature_extractor import SSDMobileNetV2FpnKerasFeatureExtractor
-  from object_detection.models.ssd_mobilenet_v2_keras_feature_extractor import SSDMobileNetV2KerasFeatureExtractor
-  from object_detection.predictors import rfcn_keras_box_predictor
+  #from object_detection.models import center_net_resnet_v1_fpn_feature_extractor
+  #from object_detection.models import faster_rcnn_inception_resnet_v2_keras_feature_extractor as frcnn_inc_res_keras
+  #from object_detection.models import faster_rcnn_resnet_keras_feature_extractor as frcnn_resnet_keras
+  #from object_detection.models import ssd_resnet_v1_fpn_keras_feature_extractor as ssd_resnet_v1_fpn_keras
+  #from object_detection.models import faster_rcnn_resnet_v1_fpn_keras_feature_extractor as frcnn_resnet_fpn_keras
+  #from object_detection.models.ssd_mobilenet_v1_fpn_keras_feature_extractor import SSDMobileNetV1FpnKerasFeatureExtractor
+  #from object_detection.models.ssd_mobilenet_v1_keras_feature_extractor import SSDMobileNetV1KerasFeatureExtractor
+  #from object_detection.models.ssd_mobilenet_v2_fpn_keras_feature_extractor import SSDMobileNetV2FpnKerasFeatureExtractor
+  #from object_detection.models.ssd_mobilenet_v2_keras_feature_extractor import SSDMobileNetV2KerasFeatureExtractor
+  #from object_detection.predictors import rfcn_keras_box_predictor
   if sys.version_info[0] >= 3:
     from object_detection.models import ssd_efficientnet_bifpn_feature_extractor as ssd_efficientnet_bifpn
 
@@ -99,16 +99,16 @@ if tf_version.is_tf1():
 
 if tf_version.is_tf2():
   SSD_KERAS_FEATURE_EXTRACTOR_CLASS_MAP = {
-      'ssd_mobilenet_v1_keras': SSDMobileNetV1KerasFeatureExtractor,
-      'ssd_mobilenet_v1_fpn_keras': SSDMobileNetV1FpnKerasFeatureExtractor,
-      'ssd_mobilenet_v2_keras': SSDMobileNetV2KerasFeatureExtractor,
-      'ssd_mobilenet_v2_fpn_keras': SSDMobileNetV2FpnKerasFeatureExtractor,
-      'ssd_resnet50_v1_fpn_keras':
-          ssd_resnet_v1_fpn_keras.SSDResNet50V1FpnKerasFeatureExtractor,
-      'ssd_resnet101_v1_fpn_keras':
-          ssd_resnet_v1_fpn_keras.SSDResNet101V1FpnKerasFeatureExtractor,
-      'ssd_resnet152_v1_fpn_keras':
-          ssd_resnet_v1_fpn_keras.SSDResNet152V1FpnKerasFeatureExtractor,
+    #   'ssd_mobilenet_v1_keras': SSDMobileNetV1KerasFeatureExtractor,
+    #   'ssd_mobilenet_v1_fpn_keras': SSDMobileNetV1FpnKerasFeatureExtractor,
+    #   'ssd_mobilenet_v2_keras': SSDMobileNetV2KerasFeatureExtractor,
+    #   'ssd_mobilenet_v2_fpn_keras': SSDMobileNetV2FpnKerasFeatureExtractor,
+    #   'ssd_resnet50_v1_fpn_keras':
+    #       ssd_resnet_v1_fpn_keras.SSDResNet50V1FpnKerasFeatureExtractor,
+    #   'ssd_resnet101_v1_fpn_keras':
+    #       ssd_resnet_v1_fpn_keras.SSDResNet101V1FpnKerasFeatureExtractor,
+    #   'ssd_resnet152_v1_fpn_keras':
+    #       ssd_resnet_v1_fpn_keras.SSDResNet152V1FpnKerasFeatureExtractor,
       'ssd_efficientnet-b0_bifpn_keras':
           ssd_efficientnet_bifpn.SSDEfficientNetB0BiFPNKerasFeatureExtractor,
       'ssd_efficientnet-b1_bifpn_keras':
@@ -128,20 +128,20 @@ if tf_version.is_tf2():
   }
 
   FASTER_RCNN_KERAS_FEATURE_EXTRACTOR_CLASS_MAP = {
-      'faster_rcnn_resnet50_keras':
-          frcnn_resnet_keras.FasterRCNNResnet50KerasFeatureExtractor,
-      'faster_rcnn_resnet101_keras':
-          frcnn_resnet_keras.FasterRCNNResnet101KerasFeatureExtractor,
-      'faster_rcnn_resnet152_keras':
-          frcnn_resnet_keras.FasterRCNNResnet152KerasFeatureExtractor,
-      'faster_rcnn_inception_resnet_v2_keras':
-      frcnn_inc_res_keras.FasterRCNNInceptionResnetV2KerasFeatureExtractor,
-      'faster_rcnn_resnet50_fpn_keras':
-          frcnn_resnet_fpn_keras.FasterRCNNResnet50FpnKerasFeatureExtractor,
-      'faster_rcnn_resnet101_fpn_keras':
-          frcnn_resnet_fpn_keras.FasterRCNNResnet101FpnKerasFeatureExtractor,
-      'faster_rcnn_resnet152_fpn_keras':
-          frcnn_resnet_fpn_keras.FasterRCNNResnet152FpnKerasFeatureExtractor,
+    #   'faster_rcnn_resnet50_keras':
+    #       frcnn_resnet_keras.FasterRCNNResnet50KerasFeatureExtractor,
+    #   'faster_rcnn_resnet101_keras':
+    #       frcnn_resnet_keras.FasterRCNNResnet101KerasFeatureExtractor,
+    #   'faster_rcnn_resnet152_keras':
+    #       frcnn_resnet_keras.FasterRCNNResnet152KerasFeatureExtractor,
+    #   'faster_rcnn_inception_resnet_v2_keras':
+    #   frcnn_inc_res_keras.FasterRCNNInceptionResnetV2KerasFeatureExtractor,
+    #   'faster_rcnn_resnet50_fpn_keras':
+    #       frcnn_resnet_fpn_keras.FasterRCNNResnet50FpnKerasFeatureExtractor,
+    #   'faster_rcnn_resnet101_fpn_keras':
+    #       frcnn_resnet_fpn_keras.FasterRCNNResnet101FpnKerasFeatureExtractor,
+    #   'faster_rcnn_resnet152_fpn_keras':
+    #       frcnn_resnet_fpn_keras.FasterRCNNResnet152FpnKerasFeatureExtractor,
   }
 
   CENTER_NET_EXTRACTOR_FUNCTION_MAP = {
@@ -149,14 +149,14 @@ if tf_version.is_tf2():
           center_net_resnet_feature_extractor.resnet_v2_50,
       'resnet_v2_101':
           center_net_resnet_feature_extractor.resnet_v2_101,
-      'resnet_v1_18_fpn':
-          center_net_resnet_v1_fpn_feature_extractor.resnet_v1_18_fpn,
-      'resnet_v1_34_fpn':
-          center_net_resnet_v1_fpn_feature_extractor.resnet_v1_34_fpn,
-      'resnet_v1_50_fpn':
-          center_net_resnet_v1_fpn_feature_extractor.resnet_v1_50_fpn,
-      'resnet_v1_101_fpn':
-          center_net_resnet_v1_fpn_feature_extractor.resnet_v1_101_fpn,
+    #   'resnet_v1_18_fpn':
+    #       center_net_resnet_v1_fpn_feature_extractor.resnet_v1_18_fpn,
+    #   'resnet_v1_34_fpn':
+    #       center_net_resnet_v1_fpn_feature_extractor.resnet_v1_34_fpn,
+    #   'resnet_v1_50_fpn':
+    #       center_net_resnet_v1_fpn_feature_extractor.resnet_v1_50_fpn,
+    #   'resnet_v1_101_fpn':
+    #       center_net_resnet_v1_fpn_feature_extractor.resnet_v1_101_fpn,
       'hourglass_10':
           center_net_hourglass_feature_extractor.hourglass_10,
       'hourglass_20':
