@@ -59,7 +59,7 @@ class NonLocalBlock(tf.keras.layers.Layer):
         filters=channels, kernel_size=1, use_bias=False, strides=1,
         padding='same')
     self.batchnorm = tf.keras.layers.BatchNormalization(
-        name='batchnorm', epsilon=1e-5, momentum=0.1, fused=True,
+        name='batchnorm', epsilon=1e-5, momentum=0.1,
         beta_initializer='zeros', gamma_initializer='zeros')
     if self._pool_size:
       self.maxpool_keys = tf.keras.layers.MaxPool2D(

@@ -49,7 +49,7 @@ def batchnorm():
         name='batchnorm', epsilon=1e-5, momentum=0.1)
   except AttributeError:
     return tf.keras.layers.BatchNormalization(
-        name='batchnorm', epsilon=1e-5, momentum=0.1, fused=BATCH_NORM_FUSED)
+        name='batchnorm', epsilon=1e-5, momentum=0.1, synchronized=True)
 
 
 class ConvolutionalBlock(tf.keras.layers.Layer):

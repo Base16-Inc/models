@@ -17,7 +17,7 @@
 import tensorflow as tf
 
 
-class FreezableSyncBatchNorm(tf.keras.layers.experimental.SyncBatchNormalization
+class FreezableSyncBatchNorm(tf.keras.layers.BatchNormalization
                             ):
   """Sync Batch normalization layer (Ioffe and Szegedy, 2014).
 
@@ -60,7 +60,7 @@ class FreezableSyncBatchNorm(tf.keras.layers.experimental.SyncBatchNormalization
       **kwargs: The keyword arguments to forward to the keras
         SyncBatchNormalization layer constructor.
     """
-    super(FreezableSyncBatchNorm, self).__init__(**kwargs)
+    super(FreezableSyncBatchNorm, self).__init__(synchronized=True, **kwargs)
     self._training = training
 
   def call(self, inputs, training=None):
